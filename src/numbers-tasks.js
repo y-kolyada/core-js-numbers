@@ -334,8 +334,9 @@ function getSine(num) {
  * 255, 16 => 'ff'
  * 2, 2    => '10'
  */
-function numberToStringInBase(/* number, base */) {
-  throw new Error('Not implemented');
+function numberToStringInBase(number, base) {
+  if (base < 2 || base > 36) throw new Error('Invalid base');
+  return number.toString(base);
 }
 
 /**
